@@ -3,7 +3,7 @@ def gauss(matrix):
 
     for x in range(column_len):
         if matrix[x][x] == 0:
-            raise ZeroDivisionError()
+            matrix[x][x] = 1
 
         for y in range(column_len):
             if x != y:
@@ -13,4 +13,11 @@ def gauss(matrix):
                     matrix[y][z] = matrix[y][z] - factor * matrix[x][z]
     return [matrix[i][column_len] / matrix[i][i] for i in range(column_len)]
 
-# TODO: Macierz wektorów własnych
+
+def macierz_wlasnosci(matrix, wartosc):
+    for x in range(matrix.shape[0]):
+        for y in range(matrix.shape[0]):
+            if x == y:
+                matrix[x][y] = matrix[x][y] - wartosc
+
+    return matrix
