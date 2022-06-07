@@ -55,26 +55,26 @@ def qr_decomposition(a):
     return [q_matrix,r_matrix]
 
 
-matrix = np.array([
-    [0, 1, 1, 1, 0],
-    [0, 0, 0, 0, 1],
-    [0, 1, 0, 0, 1],
-    [0, 0, 1, 0, 0],
-    [0, 0, 1, 0, 0]
-])
 # matrix = np.array([
-#     [1.4, 1.7, 2.9],
-#     [0.7, 1, 3],
-#     [1.9, 4.3, 2]
+#     [0, 1, 1, 1, 0],
+#     [0, 0, 0, 0, 1],
+#     [0, 1, 0, 0, 1],
+#     [0, 0, 1, 0, 0],
+#     [0, 0, 1, 0, 0]
 # ])
-# matrix = np.array([
-#     [1, 0],
-#     [1, 1],
-#     [0, 1]
-# ])
-
-qr_matrices = qr_decomposition(matrix)
-print(f'Q MATRIX: \n{qr_matrices[0]}\n')
-print(f'R MATRIX: \n{qr_matrices[1]}\n')
-
-print(f'A MATRIX: \n{np.around(np.dot(qr_matrices[0], qr_matrices[1]), decimals=2)}')
+# # matrix = np.array([
+# #     [1.4, 1.7, 2.9],
+# #     [0.7, 1, 3],
+# #     [1.9, 4.3, 2]
+# # ])
+# # matrix = np.array([
+# #     [1, 0],
+# #     [1, 1],
+# #     [0, 1]
+# # ])
+#
+# qr_matrices = qr_decomposition(matrix)
+# print(f'Q MATRIX: \n{qr_matrices[0]}\n')
+# print(f'R MATRIX: \n{qr_matrices[1]}\n')
+#
+# print(f'A MATRIX: \n{np.around(np.dot(qr_matrices[0], qr_matrices[1]), decimals=2)}')
